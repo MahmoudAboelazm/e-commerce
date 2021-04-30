@@ -1,0 +1,5 @@
+/web/node_modules
+/web/.env
+/web/.next
+/server/node_modules
+/server/.env

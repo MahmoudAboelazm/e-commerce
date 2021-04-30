@@ -7,7 +7,7 @@ import IconBreadcrumbs from "../../components/BreadcrumbsAndFilter/Component";
 import NestedGrid from "../../components/Grid/Grid";
 import Nav from "../../components/Nav/Nav";
 import PaginationRounded from "../../components/Pagination/pagination";
-import { rootReducer } from "../../new-redux/configure-store";
+import { rootReducer } from "../../redux-state/configure-store";
 import { State } from "../../redux-state/configureStore";
 import { loadSSRProducts } from "../../redux-state/products";
 import useStyles from "../../styles/Home.module";

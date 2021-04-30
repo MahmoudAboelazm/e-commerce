@@ -16,7 +16,7 @@ import {
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
-import { rootReducer } from "../../../new-redux/configure-store";
+import { rootReducer } from "../../../redux-state/configure-store";
 import { useStyles } from "./styles";
 
 interface CheckoutProps {

@@ -13,7 +13,7 @@ import Stripe from "../components/Cart/Payment/stripe";
 import Checkout from "../components/Cart/Checkout/checkout";
 import Items from "../components/Cart/Items/items";
 import Nav from "../components/Nav/Nav";
-import { rootReducer } from "../new-redux/configure-store";
+import { rootReducer } from "../redux-state/configure-store";
 import useStyles from "../styles/Home.module";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";

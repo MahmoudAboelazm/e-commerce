@@ -17,7 +17,7 @@ import {
 } from "@material-ui/core";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { rootReducer } from "../../../new-redux/configure-store";
+import { rootReducer } from "../../../redux-state/configure-store";
 import {
   apiUpdateCartItem,
   deleteCartItem,

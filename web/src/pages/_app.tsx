@@ -3,7 +3,7 @@ import App from "next/app";
 import Head from "next/head";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import wrapper from "../new-redux/configure-store";
+import wrapper from "../redux-state/configure-store";
 import theme from "../theme";
 
 class _App extends App {

@@ -2,7 +2,7 @@ import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
 import { useRouter } from "next/router";
 import React from "react";
 import { useSelector } from "react-redux";
-import { rootReducer } from "../../../new-redux/configure-store";
+import { rootReducer } from "../../../redux-state/configure-store";
 import { useStyles } from "../styles";
 
 export const Filter = () => {

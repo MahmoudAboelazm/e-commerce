@@ -2,9 +2,9 @@ import { createWrapper } from "next-redux-wrapper";
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-import cart from "./cartItems";
+import cart from "./reducers/cartItems";
 import api from "./middleware/api";
-import products from "./products";
+import products from "./reducers/products";
 
 let middleware = [thunk, api];
 export const rootReducer = combineReducers({

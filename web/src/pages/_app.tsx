@@ -1,8 +1,7 @@
-import React from "react";
-import App from "next/app";
-import Head from "next/head";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import App from "next/app";
+import React from "react";
 import wrapper from "../redux-state/configure-store";
 import theme from "../theme";
 

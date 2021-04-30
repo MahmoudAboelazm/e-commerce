@@ -6,18 +6,18 @@ import {
   Stepper,
   Typography,
 } from "@material-ui/core";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import { NextPage } from "next";
 import Head from "next/head";
-import React, { useEffect, useState } from "react";
-import Stripe from "../components/Cart/Payment/stripe";
+import React from "react";
+import { useSelector } from "react-redux";
 import Checkout from "../components/Cart/Checkout/checkout";
 import Items from "../components/Cart/Items/items";
+import Stripe from "../components/Cart/Payment/stripe";
 import Nav from "../components/Nav/Nav";
 import { rootReducer } from "../redux-state/configure-store";
 import useStyles from "../styles/Home.module";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
-import { useSelector } from "react-redux";
 import { trackingRouterChange } from "../utils/trackingRouterChange";
 
 function getSteps() {

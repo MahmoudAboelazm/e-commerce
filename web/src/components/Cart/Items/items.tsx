@@ -2,10 +2,7 @@ import {
   Avatar,
   Button,
   CircularProgress,
-  createStyles,
   Grid,
-  makeStyles,
-  Paper,
   Table,
   TableBody,
   TableCell,
@@ -13,20 +10,19 @@ import {
   TableHead,
   TableRow,
   TextField,
-  Theme,
 } from "@material-ui/core";
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import SyncIcon from "@material-ui/icons/Sync";
+import { Alert } from "@material-ui/lab";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { rootReducer } from "../../../redux-state/configure-store";
 import {
   apiUpdateCartItem,
   deleteCartItem,
   updateItemQunatity,
-} from "../../../redux-state/cartItems";
-import SyncIcon from "@material-ui/icons/Sync";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+} from "../../../redux-state/reducers/cartItems";
+import { rootReducer } from "../../../redux-state/configure-store";
 import { useStyles } from "./styles";
-import { Alert } from "@material-ui/lab";
 interface ItemsProps {
   nextStep: Function;
 }

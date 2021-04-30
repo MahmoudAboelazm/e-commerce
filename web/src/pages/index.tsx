@@ -8,21 +8,9 @@ import NestedGrid from "../components/Grid/Grid";
 import Nav from "../components/Nav/Nav";
 import PaginationRounded from "../components/Pagination/pagination";
 import { rootReducer } from "../redux-state/configure-store";
-import { deleteCartItem } from "../redux-state/cartItems";
-import { State } from "../redux-state/configureStore";
-import { loadSSRProducts } from "../redux-state/products";
+import { loadSSRProducts } from "../redux-state/reducers/products";
 import useStyles from "../styles/Home.module";
 import { trackingRouterChange } from "../utils/trackingRouterChange";
-
-// export const getServerSideProps = async ({ query, store }) => {
-//   store.dispatch(
-//     await loadSSRProducts({
-//       pageId: query.page ? parseInt(query.page as any) : 1,
-//     }),
-//   );
-
-//   return;
-// };
 
 const Home: NextPage<any> = (state: ReturnType<typeof rootReducer>) => {
   const classes = useStyles();
@@ -54,15 +42,14 @@ const Home: NextPage<any> = (state: ReturnType<typeof rootReducer>) => {
 };
 
 Home.getInitialProps = async ({ store, query }) => {
-  //if (typeof window !== "undefined") return;
   store.dispatch(
     await loadSSRProducts({
       pageId: query.page ? parseInt(query.page as any) : 1,
       orderByPrice: query.p as string,
     }),
   );
-  //console.log(query);
+
   return;
 };
 
-export default connect((state: State) => state)(Home);
+export default connect((state) => state)(Home);

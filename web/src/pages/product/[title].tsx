@@ -1,18 +1,13 @@
-import { NextPage } from "next";
 import { Button, Container, Grid, Typography } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
+import { NextPage } from "next";
 import Head from "next/head";
 import React, { useState } from "react";
 import Nav from "../../components/Nav/Nav";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
 import useStyles from "../../styles/productpage";
-import IconBreadcrumbs from "../../components/BreadcrumbsAndFilter/Component";
 const Product: NextPage<any> = () => {
   const classes = useStyles();
-
-  // const products = state.products;
-
-  //const loading = trackingRouterChange();
   const [quantity, setQuantity] = useState(1);
   return (
     <>

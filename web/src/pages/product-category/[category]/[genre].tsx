@@ -9,9 +9,8 @@ import Nav from "../../../components/Nav/Nav";
 import PaginationRounded from "../../../components/Pagination/pagination";
 import { rootReducer } from "../../../redux-state/configure-store";
 import { State } from "../../../redux-state/configureStore";
-import { loadSSRProducts } from "../../../redux-state/products";
+import { loadSSRProducts } from "../../../redux-state/reducers/products";
 import useStyles from "../../../styles/Home.module";
-import Router from "next/router";
 import { trackingRouterChange } from "../../../utils/trackingRouterChange";
 const Page: NextPage<any> = (state: ReturnType<typeof rootReducer>) => {
   const classes = useStyles();

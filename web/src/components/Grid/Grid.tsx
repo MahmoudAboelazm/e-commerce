@@ -5,8 +5,8 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import NextLink from "next/link";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { handleAddToCart } from "../../redux-state/reducers/cartItems";
 import { rootReducer } from "../../redux-state/configure-store";
-import { handleAddToCart } from "../../redux-state/cartItems";
 import { Genre } from "../Genres/Genre";
 import useStyles from "./styles";
 interface NestedGridProps {

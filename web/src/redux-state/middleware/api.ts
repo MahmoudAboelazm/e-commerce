@@ -1,6 +1,6 @@
 import axios from "axios";
-import { total } from "../cartItems";
-import { apiCall } from "../products";
+import { total } from "../reducers/cartItems";
+import { apiCall } from "../reducers/products";
 
 const api = ({ dispatch }) => (next) => async (action) => {
   console.log(action.type);
@@ -8,7 +8,7 @@ const api = ({ dispatch }) => (next) => async (action) => {
 
   const { url, method, data, onSucces, onError, headers } = action.payload;
   next(action);
-  //console.log(data);
+
   try {
     const response = await axios.request({
       baseURL: process.env.NEXT_PUBLIC_BASE_URL,
@@ -24,6 +24,5 @@ const api = ({ dispatch }) => (next) => async (action) => {
   } catch (err) {
     dispatch({ type: onError, payload: err.message });
   }
-  //next(action);
 };
 export default api;

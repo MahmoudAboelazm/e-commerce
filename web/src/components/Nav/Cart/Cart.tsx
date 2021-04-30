@@ -15,8 +15,11 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  deleteCartItem,
+  loadCartItems,
+} from "../../../redux-state/reducers/cartItems";
 import { rootReducer } from "../../../redux-state/configure-store";
-import { deleteCartItem, loadCartItems } from "../../../redux-state/cartItems";
 import useStyles from "../styles";
 
 export const Cart = () => {
